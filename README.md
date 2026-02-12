@@ -1,23 +1,24 @@
 # pohe-gateway
+
 Proof of Human Effort (PoHE) gateway for deterministic compute admission.
 
-**Production gateway:** https://gateway.varacis.com
+This repository documents and will open-source the Varacis PoHE gateway —
+an admission governor that sits in front of AI providers and makes a single
+decision per request: ALLOW / DEFER / BLOCK.
 
-This repo documents the PoHE Gateway behavior and integration.
+## Live Gateway
 
-## Usage
+The production gateway is currently running at:
 
-Original:
-```
-https://api.perplexity.ai/v1/models
-```
+https://gateway.varacis.com
 
-With Varacis PoHE Gateway:
-```
-https://gateway.varacis.com/gateway/perplexity/v1/models
-```
+Supported providers can be discovered via:
 
-Authentication:
-```
--H "X-Upstream-Key: <YOUR_EXISTING_API_KEY>"
+https://gateway.varacis.com/healthz
+
+Example request:
+
+```bash
+curl https://gateway.varacis.com/gateway/perplexity/v1/models \
+  -H "X-Upstream-Key: $PERPLEXITY_API_KEY"
 ```
