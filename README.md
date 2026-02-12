@@ -1,5 +1,10 @@
 # pohe-gateway
 Proof of Human Effort (PoHE) gateway for deterministic compute admission.
+
+**Production gateway:** https://gateway.varacis.com
+
+This repo documents the PoHE Gateway behavior and integration.
+
 ## Usage
 
 Original:
